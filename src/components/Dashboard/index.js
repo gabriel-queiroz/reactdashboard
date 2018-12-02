@@ -12,7 +12,7 @@ import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import DashboardRouter from "../../routes/DashboardRouter";
+import Routes from "./routes";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -175,7 +175,7 @@ class Dashboard extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div style={{ marginTop: "100px" }}>
-            <DashboardRouter />
+            <Routes />
           </div>
         </main>
       </div>

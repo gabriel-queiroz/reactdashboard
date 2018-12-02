@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Contact from "../pages/Contact";
 import Dashboard from "../components/Dashboard";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Login from "../pages/Login";
 
-const routes = ({ history }) => (
-  <BrowserRouter history={history}>
+const Routes = () => (
+  <BrowserRouter>
     <Switch>
-      <Route path="/" component={Dashboard} />
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/login" component={Login} />
     </Switch>
   </BrowserRouter>
 );
 
-export default routes;
+export default Routes;
