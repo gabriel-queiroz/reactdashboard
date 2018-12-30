@@ -6,6 +6,10 @@ const Reset = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    html,body, #root{
+      height: 100%;
+    }
+    
 
 `;
 
