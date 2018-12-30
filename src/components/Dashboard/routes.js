@@ -1,8 +1,8 @@
-import React, { Suspense, lazy } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { Suspense, lazy } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-const Home = lazy(() => import("../../pages/Home"));
-const Contact = lazy(() => import("../../pages/Contact"));
+const Home = lazy(() => import('../../pages/Home'));
+const Contact = lazy(() => import('../../pages/Contact'));
 
 const routes = () => (
   <Suspense fallback={<h1>Carregando..</h1>}>

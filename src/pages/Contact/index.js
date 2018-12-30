@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Home = () => (
   <div>
-    <button>Clique-me</button>
+    <button>
+      <span>AA</span>
+    </button>
   </div>
 );
 
