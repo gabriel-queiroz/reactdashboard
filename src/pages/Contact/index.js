@@ -1,7 +1,9 @@
 import React from "react";
 
-// import { Container } from './styles';
-
-const Home = () => <h1>Contact</h1>;
+const Home = () => (
+  <div>
+    <button>Clique-me</button>
+  </div>
+);
 
 export default Home;

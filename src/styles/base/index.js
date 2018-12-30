@@ -5,6 +5,10 @@ const Base = createGlobalStyle`
         font-family: 'Roboto',sans-serif;
         font-size: 16px;
     }
+    button{
+        border: none;
+        background-color: var(--transparent);
+    }
 `;
 
 export default Base;
