@@ -1,14 +1,16 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "../../pages/Home";
-import Contact from "../../pages/Contact";
 
+const Home = lazy(() => import("../../pages/Home"));
+const Contact = lazy(() => import("../../pages/Contact"));
 
 const routes = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/contact" component={Contact} />
-  </Switch>
+  <Suspense fallback={<h1>Carregando..</h1>}>
+    <Switch>
+      <Route component={Home} exact path="/" />
+      <Route component={Contact} exact path="/contact" />
+    </Switch>
+  </Suspense>
 );
 
 export default routes;
