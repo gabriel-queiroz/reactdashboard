@@ -99,9 +99,7 @@ class Dashboard extends React.Component {
     open: true,
   };
 
-  componentDidMount() {
-    console.log(this.props.children);
-  }
+  componentDidMount() {}
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -163,6 +161,7 @@ class Dashboard extends React.Component {
           </div>
           <Link to="/">Home</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/login">Login</Link>
         </Drawer>
         <main className={classes.content}>
           <div style={{ marginTop: '100px' }}>
