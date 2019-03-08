@@ -10,6 +10,7 @@ const Routes = () => (
     <Suspense fallback={<Loader />}>
       <Switch>
         <Route exact path="/login" component={Login} />
+        <Route exact path="/404" component={() => <div>deuu erro aqui</div>} />
         <Route path="/" component={Dashboard} />
       </Switch>
     </Suspense>

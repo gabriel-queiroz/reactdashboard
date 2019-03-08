@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Loader from '../Loader';
 
 const Home = lazy(() => import('../../pages/Home'));
@@ -10,6 +10,7 @@ const routes = () => (
     <Switch>
       <Route component={Home} exact path="/" />
       <Route component={Contact} exact path="/contact" />
+      <Redirect from="*" to="/404" />
     </Switch>
   </Suspense>
 );
