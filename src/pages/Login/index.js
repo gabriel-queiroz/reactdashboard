@@ -24,7 +24,8 @@ const styles = {
 };
 class Login extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, history } = this.props;
+    console.log(history);
     return (
       <Container>
         <Card className={classes.card}>
@@ -39,6 +40,7 @@ class Login extends Component {
                 type="password"
               />
               <Button
+                onClick={() => history.push('/')}
                 style={{
                   marginTop: 30,
                   width: '100%',

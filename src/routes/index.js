@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Loader from '../components/Loader';
+import PrivateRoute from './PrivateRoute';
 
 const Dashboard = lazy(() => import('../components/Dashboard'));
 const Login = lazy(() => import('../pages/Login'));
@@ -11,7 +12,7 @@ const Routes = () => (
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/404" component={() => <div>deuu erro aqui</div>} />
-        <Route path="/" component={Dashboard} />
+        <PrivateRoute path="/" component={Dashboard} />
       </Switch>
     </Suspense>
   </BrowserRouter>
