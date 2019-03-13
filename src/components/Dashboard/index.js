@@ -13,6 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Routes from './routes';
 
 const drawerWidth = 240;
@@ -109,9 +110,14 @@ class Dashboard extends React.Component {
     this.setState({ open: false });
   };
 
+  logout = () => {
+    const { history } = this.props;
+    localStorage.removeItem('@reactdashboard:token');
+    history.push('/login');
+  };
+
   render() {
     const { classes } = this.props;
-
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -141,9 +147,17 @@ class Dashboard extends React.Component {
               Dashboard
             </Typography>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
+              <button
+                onClick={this.logout}
+                style={{
+                  fontSize: 20,
+                  color: '#ffffff',
+                  cursor: 'pointer',
+                  outline: 'none',
+                }}
+              >
+                Sair
+              </button>
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -177,4 +191,4 @@ Dashboard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Dashboard);
+export default withRouter(withStyles(styles)(Dashboard));
