@@ -5,7 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { ToastContainer, toast } from 'react-toastify';
-import { withRouter } from 'react-router-dom';
 import { Container, Form } from './styles';
 import { login } from '../../services/userService';
 
@@ -121,4 +120,4 @@ class Login extends Component {
   }
 }
 
-export default withRouter(withStyles(styles)(Login));
+export default (withStyles(styles)(Login));
