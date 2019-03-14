@@ -42,7 +42,6 @@ class Login extends Component {
   handleFormsubmit = async () => {
     const { username, password } = this.state;
     const { history } = this.props;
-    console.log(history);
     await this.setState({ loading: true });
     if (!!username && !!password) {
       try {
@@ -52,7 +51,6 @@ class Login extends Component {
         localStorage.setItem('@reactdashboard:token', token);
         history.push('/');
       } catch (error) {
-        console.log(error);
         toast.error('Email/Usuário incorretos');
       }
     } else {
@@ -63,7 +61,6 @@ class Login extends Component {
 
   render() {
     const { classes, history } = this.props;
-    console.log(this.props);
     const { username, password, loading } = this.state;
     return (
       <Container>
@@ -120,4 +117,4 @@ class Login extends Component {
   }
 }
 
-export default (withStyles(styles)(Login));
+export default withStyles(styles)(Login);

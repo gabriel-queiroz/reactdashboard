@@ -14,7 +14,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-import Routes from './routes';
+import Routes from '../../routes/Dashboard';
 
 const drawerWidth = 240;
 
