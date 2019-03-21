@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Loader from '../components/Loader';
 
-const Home = lazy(() => import('../../pages/Home'));
-const Contact = lazy(() => import('../../pages/Contact'));
+const Home = lazy(() => import('../pages/Home'));
+const Contact = lazy(() => import('../pages/Contact'));
 
 const routes = () => (
   <Suspense fallback={<Loader />}>

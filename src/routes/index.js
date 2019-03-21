@@ -4,7 +4,7 @@ import Loader from '../components/Loader';
 import PrivateRoute from './PrivateRoute';
 import LoginRoute from './LoginRoute';
 
-const Dashboard = lazy(() => import('../components/Dashboard'));
+const Dashboard = lazy(() => import('../pages/Dashboard'));
 const Login = lazy(() => import('../pages/Login'));
 
 const Routes = () => (

@@ -52,6 +52,7 @@ class Login extends Component {
         history.push('/');
       } catch (error) {
         toast.error('Email/Usuário incorretos');
+        this.setState({ loading: false });
       }
     } else {
       toast.warn('Email e senha obrigatórios');
