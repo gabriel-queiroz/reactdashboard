@@ -6,5 +6,5 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #ccc;
+  background-color: rgba(255, 0, 0, 0.4);
 `;
